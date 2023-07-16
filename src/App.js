@@ -1,10 +1,10 @@
 import Header from "./components/PageEnvelope/Header";
 import Footer from "./components/PageEnvelope/Footer";
-import Profile from "./components/Profile/Profile";
-import Portfolio from "./components/Portfolio/Portfolio";
-import Service from "./components/Service/Service";
-import Etsy from "./components/Embedded/Etsy";
-
+import Profile from "./components/Home/Profile";
+import Portfolio from "./components/Home/Portfolio";
+import Service from "./components/Home/Service";
+import Etsy from "./components/Home/Etsy";
+import FindMe from "./components/Home/FindMe";
 function App() {
     return (
         <div className="App">
@@ -12,7 +12,7 @@ function App() {
             <Profile />
             <Portfolio />
             <Service />
-            <Etsy/>
+            <FindMe />
             <Footer />
         </div>
     );

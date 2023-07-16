@@ -1,13 +1,79 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.App {
+    background-color: beige;
+    width: 100%;
+    overflow-y: scroll;
+    height: auto;
+}
+
+#profile {
+    background-color: aquamarine;
+    display: flex;
+    height: 32rem;
+}
+.image {
+    width: 60%;
+    padding: 1rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+    .image img {
+        width: auto;
+        border-radius: 2rem;
+    }
+.writing {
+    padding: 7rem;
+    width: 30%
+}
+
+
+#portfolio{
+    background-color: tomato;
+    height: 32rem;
+    display:flex;
+    flex-flow:column;
+    align-items:center;
+}
+.swiper{
+    width:70%;
+    height:70%;
+    background-color: coral;
+}
+
+#service{
+    height:32rem;
+    background-color:greenyellow;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.idea {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height:100%;
+}
+.execution, .development{
+    height:90%;
+    width:40%;
+    background-color:forestgreen;
+    margin:0 5%;
+}
+
+#findMe{
+    height:22rem;
+    background-color: burlywood;
+    display:flex;
+    justify-content:center;
 }

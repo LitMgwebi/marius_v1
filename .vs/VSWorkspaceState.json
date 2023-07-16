@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src"
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\Embedded"
   ],
+  "SelectedNode": "\\src\\components\\Embedded\\Etsy.jsx",
   "PreviewInSolutionExplorer": false
 }
