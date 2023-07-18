@@ -1,18 +1,23 @@
 import Header from "./components/PageEnvelope/Header";
 import Footer from "./components/PageEnvelope/Footer";
-import Profile from "./components/Home/Profile";
-import Portfolio from "./components/Home/Portfolio";
-import Service from "./components/Home/Service";
-import Etsy from "./components/Home/Etsy";
-import FindMe from "./components/Home/FindMe";
+import Home from "./components/Home/Home";
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+} from "react-router-dom";
+import Items from "./components/Items/Items";
+
 function App() {
     return (
         <div className="App">
             <Header />
-            <Profile />
-            <Portfolio />
-            <Service />
-            <FindMe />
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/portfolio" element={<Items /> }/>
+                </Routes>
+            </BrowserRouter>
             <Footer />
         </div>
     );
