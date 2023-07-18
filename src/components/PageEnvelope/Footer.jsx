@@ -1,8 +1,12 @@
 function Footer() {
     return (
         <footer>
-            <a href="lithimgwebi.vercel.app/">@PoweredByLithi</a>
-            <p>2023.07</p>
+            <div>
+                <a href="lithimgwebi.vercel.app/">@PoweredByLithi</a>
+            </div>
+            <div>
+                <p>2023.07</p>
+            </div>
         </footer>
     )
 }

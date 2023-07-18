@@ -6,7 +6,7 @@ import "swiper/css/thumbs"
 function Portfolio() {
     return (
         <div id="portfolio">
-            <h2>Portfolio</h2>
+            <h1>Portfolio</h1>
             <Swiper
                 modules={[Thumbs]}
                 class="swiper"

@@ -1,7 +1,7 @@
 function FindMe() {
     return (
         <div id="findMe">
-            <h3>Find Me</h3>
+            <h1>Find Me</h1>
         </div>
     )
 }

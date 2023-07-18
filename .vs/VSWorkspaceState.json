@@ -3,8 +3,9 @@
     "",
     "\\src",
     "\\src\\components",
-    "\\src\\components\\Embedded"
+    "\\src\\components\\Home",
+    "\\src\\media"
   ],
-  "SelectedNode": "\\src\\components\\Embedded\\Etsy.jsx",
+  "SelectedNode": "\\src\\components\\Home",
   "PreviewInSolutionExplorer": false
 }
