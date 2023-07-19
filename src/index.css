@@ -4,6 +4,12 @@
     --tetiaryColor: #3bce4e;
     --textColour: #ffffff;
 }
+[data-theme='dark'] {
+    --primaryColor: #404258;
+    --secondaryColour: #474E68;
+    --tetiaryColor: #50577A;
+    --textColour: #6B728E;
+}
 
 body {
     margin: 0;
@@ -41,9 +47,35 @@ header {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    justify-content:space-around;
     width: 100%;
     margin-bottom: 2rem;
 }
+.siteLinks{
+    width: auto;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+}
+.siteLinks a {
+    margin: 0 0.5rem;
+}
+.headerButton {
+    margin: 2rem;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headerLogo {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+    .headerLogo:hover {
+        width: 1.45rem;
+        height: 1.45rem;
+    }
 
 #profile {
     background-image: linear-gradient(to bottom right, var(--primaryColor), var(--secondaryColour));
@@ -79,7 +111,7 @@ header {
     width: 80%;
 }
 .slide{
-    background-color: forestgreen;
+    background-color: var(--tetiaryColor);
 }
 .buttonGroup{
     margin: 1rem;
@@ -140,8 +172,8 @@ header {
     height: 100%;
 }
 .itemSwiper {
-    background-color: forestgreen;
-    height: 80%;
+    background-color: var(--tetiaryColor);
+    height: 70%;
     width: 100%;
 }
 
@@ -149,7 +181,7 @@ footer{
     height: 10rem;
     background-color: var(--primaryColor);
     display: flex;
-    align-content:space-around;
+    justify-content:space-around;
     flex-direction: row;
 }
 footer div{
