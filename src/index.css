@@ -19,6 +19,7 @@ code {
 
 a, p, h1, h2, h3, h4, h5, h6{
     color:var(--textColour);
+    text-decoration: none;
 }
 
 .App {
@@ -68,15 +69,20 @@ header {
 
 #portfolio {
     background-image: linear-gradient(to bottom left, var(--secondaryColour), var(--primaryColor));
-    height: 32rem;
+    height: auto;
     display: flex;
     flex-flow: column;
     align-items: center;
 }
 .swiper{
-    width:70%;
-    height:70%;
-    background-color: coral;
+    height: 25rem;
+    width: 80%;
+}
+.slide{
+    background-color: forestgreen;
+}
+.buttonGroup{
+    margin: 1rem;
 }
 
 #service {
@@ -123,6 +129,20 @@ header {
     background-image: linear-gradient(to bottom left, var(--secondaryColour), var(--primaryColor));
     display: flex;
     justify-content: center;
+}
+
+#items {
+    background-image: linear-gradient(to bottom right, var(--primaryColor), var(--secondaryColour));
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+.itemSwiper {
+    background-color: forestgreen;
+    height: 80%;
+    width: 100%;
 }
 
 footer{

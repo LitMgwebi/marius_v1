@@ -4,8 +4,9 @@
     "\\src",
     "\\src\\components",
     "\\src\\components\\Home",
+    "\\src\\components\\Items",
     "\\src\\media"
   ],
-  "SelectedNode": "\\src\\components\\Home",
+  "SelectedNode": "\\src\\index.css",
   "PreviewInSolutionExplorer": false
 }
