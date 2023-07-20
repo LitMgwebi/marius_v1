@@ -18,9 +18,6 @@ function Service() {
                     <h3>The best idea are worthless without execution. I will build your custom Excel sheet.</h3>
                 </section>
             </div>
-            <div>
-                <button>book</button>
-            </div>
         </div>
     )
 }

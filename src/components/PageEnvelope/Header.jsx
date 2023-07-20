@@ -14,6 +14,7 @@ function Header({ theme, imgIcon }) {
             </div>
             <section className="siteLinks">
                 <a href="#profile">Profile</a>
+                <a href="#aboutMe">About Me</a>
                 <a href="#portfolio">Portfolio</a>
                 <a href="#service">Services</a>
                 <a href="#findMe">Find Me</a>
