@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Service() {
     return (
         <div id="service">
@@ -17,6 +19,10 @@ function Service() {
                     <h2>Idea Execution</h2>
                     <h3>The best idea are worthless without execution. I will build your custom Excel sheet.</h3>
                 </section>
+            </div>
+
+            <div className="buttonGroup">
+                <button><Link to="/portfolio">View Menu</Link></button>
             </div>
         </div>
     )

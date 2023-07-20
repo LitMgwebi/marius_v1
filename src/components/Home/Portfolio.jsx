@@ -10,9 +10,6 @@ function Portfolio() {
     return (
         <div id="portfolio">
             <h1>Portfolio</h1>
-            <div className="buttonGroup">
-                <button><Link to="/portfolio">View Archive</Link></button>
-            </div>
             <div className="swiper-slide">
                 <Swiper
                     effect={"cards"}

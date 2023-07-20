@@ -1,14 +1,14 @@
 :root {
-    --primaryColor: #232323;
-    --secondaryColour: #343030;
-    --tetiaryColor: #3bce4e;
-    --textColour: #ffffff;
-}
-[data-theme='dark'] {
     --primaryColor: #404258;
     --secondaryColour: #474E68;
     --tetiaryColor: #50577A;
     --textColour: #6B728E;
+}
+[data-theme='dark'] {
+    --primaryColor: #232323;
+    --secondaryColour: #4f4e4e;
+    --tetiaryColor: #3bce4e;
+    --textColour: #ffffff;
 }
 
 body {
@@ -39,6 +39,16 @@ h2 {
 h3 {
     font-size: 25px;
 }
+
+button {
+    padding: 1rem;
+    background-color: var(--tetiaryColor);
+    color: var(--textColour);
+    border: none;
+    font-size: 1rem;
+    border-radius: 1rem;
+}
+
 
 .App {
     background-color: var(--primaryColor);
@@ -89,20 +99,6 @@ header {
         height: 1.45rem;
     }
 
-#aboutMe {
-    height: 25rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-}
-.aboutMeWriting {
-    height: 80%;
-    display: flex;
-    justify-content: center;
-    padding: 0 15%;
-}
-
 #profile {
     background-image: linear-gradient(to bottom right, var(--primaryColor), var(--secondaryColour));
     display: flex;
@@ -128,17 +124,32 @@ header {
     font-size: 55px;
 }
 
+#aboutMe {
+    background-image: linear-gradient(to bottom left, var(--secondaryColour), var(--primaryColor));
+    height: 25rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.aboutMeWriting {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    padding: 0 15%;
+}
+
 
 #portfolio {
-    background-image: linear-gradient(to bottom left, var(--secondaryColour), var(--primaryColor));
+    background-image: linear-gradient(to bottom right, var(--primaryColor), var(--secondaryColour));
     height: auto;
     display: flex;
     flex-flow: column;
     align-items: center;
 }
 .swiper{
-    height: 25rem;
-    width: 80%;
+    height: 20rem;
+    width: 70%;
 }
 .slide{
     background-color: var(--tetiaryColor);
@@ -149,7 +160,7 @@ header {
 
 #service {
     height: auto;
-    background-image: linear-gradient(to bottom right, var(--primaryColor), var(--secondaryColour));
+    background-image: linear-gradient(to bottom left, var(--secondaryColour), var(--primaryColor));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -187,8 +198,8 @@ header {
     }
 
 #findMe {
+    background-image: linear-gradient(to bottom right, var(--primaryColor), var(--secondaryColour));
     height: 22rem;
-    background-image: linear-gradient(to bottom left, var(--secondaryColour), var(--primaryColor));
     display: flex;
     justify-content: center;
 }
@@ -203,7 +214,7 @@ header {
 }
 .itemSwiper {
     background-color: var(--tetiaryColor);
-    height: 70%;
+    height: 60%;
     width: 100%;
 }
 
