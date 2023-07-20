@@ -47,8 +47,12 @@ button {
     border: none;
     font-size: 1rem;
     border-radius: 1rem;
+    margin: 1rem
 }
 
+hr{
+    color: var(--tetiaryColor);
+}
 
 .App {
     background-color: var(--primaryColor);
@@ -153,9 +157,6 @@ header {
 }
 .slide{
     background-color: var(--tetiaryColor);
-}
-.buttonGroup{
-    margin: 1rem;
 }
 
 #service {
