@@ -1,8 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { Grid, Pagination } from "swiper/modules";
 import { Link } from "react-router-dom"
 import "swiper/css";
-import "swiper/css/effect-coverflow";
+import 'swiper/css/grid';
 import 'swiper/css/pagination';
 function Items() {
     return (
@@ -13,12 +13,11 @@ function Items() {
             </div>
             <div className="swiper-slide">
                 <Swiper
-                    effect={"coverflow"}
-                    grabCursor={true}
-                    centeredSlides={true}
-                    slidePerView={'auto'}
-                    pagination={true}
-                    modules={[EffectCoverflow, Pagination]}
+                    slidePerView={3}
+                    grid={{ rows: 2, }}
+                    spacebetween={30}
+                    pagination={{ clickable: true, }}
+                    modules={[Grid, Pagination]}
                     className="itemSwiper"
                 >
                     <SwiperSlide className="slide">

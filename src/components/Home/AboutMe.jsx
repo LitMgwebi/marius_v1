@@ -4,7 +4,7 @@ function AboutMe() {
             <h1>About Me</h1>
             <section className="aboutMeWriting">
                 <h3>
-                    Hi I´m Marius Edel and I am an german student with
+                    Hi I'm Marius Edel and I am an german student with
                     extensive experience in data analysis,
                     automation, and visualization. I can help you
                     streamline your workflow and improve

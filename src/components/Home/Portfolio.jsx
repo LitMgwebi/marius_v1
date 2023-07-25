@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCards, Pagination, Navigation } from "swiper/modules";
+import { EffectCards, Pagination, Autoplay } from "swiper/modules";
 import { Link } from "react-router-dom"
 import "swiper/css";
 import "swiper/css/effect-cards";
@@ -13,11 +13,13 @@ function Portfolio() {
             <div className="swiper-slide">
                 <Swiper
                     effect={"cards"}
-                    pagination={{
-                        type: 'fraction'
+                    pagination={true}
+                    autoplay={{
+                        delay: 1750,
+                        disableOnInteraction: false,
                     }}
-                    navigation={true}
-                    modules={[EffectCards, Pagination, Navigation]}
+                    grabCursor={true }
+                    modules={[EffectCards, Pagination, Autoplay]}
                     className="swiper"
                 >
                     <SwiperSlide className="slide">

@@ -106,25 +106,27 @@ header {
 #profile {
     background-image: linear-gradient(to bottom right, var(--primaryColor), var(--secondaryColour));
     display: flex;
+    align-items: center;
     height: 32rem;
 }
 .image {
-    width: 40%;
+    width: 50%;
     padding: 1rem;
-    height: auto;
+    height: 80%;
     display: flex;
     justify-content: center;
 }
     .image img {
         width: auto;
-        border-radius: 2rem;
+        border-radius: 5rem;
     }
 .writing {
     display:flex;
-    justify-content:center;
+    flex-direction: row;
+    justify-content:flex-start;
     align-items: center;
-    padding: 0 10%;
-    width: 60%;
+    height: 100%;
+    width: 50%;
     font-size: 55px;
 }
 
@@ -135,25 +137,26 @@ header {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
 .aboutMeWriting {
     height: 80%;
     display: flex;
     justify-content: center;
-    padding: 0 15%;
+    width: 65%;
 }
 
 
 #portfolio {
     background-image: linear-gradient(to bottom right, var(--primaryColor), var(--secondaryColour));
-    height: auto;
+    height: 32rem;
     display: flex;
     flex-flow: column;
     align-items: center;
 }
 .swiper{
-    height: 20rem;
-    width: 70%;
+    height: 65%;
+    width: 65%;
 }
 .slide{
     background-color: var(--tetiaryColor);
@@ -177,20 +180,24 @@ header {
 }
 .execution, .development{
     height:100%;
-    width:40%;
-    margin:0 5%;
+    width:35%;
     display: flex;
     flex-flow: column nowrap;
     justify-content:flex-start;
     align-items: center;
 }
-    .execution h3, .development h3 {
+    .execution h3{
+        width: 70%;
+        text-align: center;
+    }
+    .development h3 {
         width: 60%;
+        text-align: center;
     }
 .ideaImage {
-    width: 45%;
+    width: 35%;
     padding: 1rem;
-    height: 45%;
+    height: 35%;
     display: flex;
     justify-content: center;
 } 
@@ -216,7 +223,7 @@ header {
 .itemSwiper {
     background-color: var(--tetiaryColor);
     height: 60%;
-    width: 100%;
+    width: 60%;
 }
 
 footer{
