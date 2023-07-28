@@ -13,13 +13,13 @@ function Header({ theme, imgIcon }) {
                         : <img src={moon} onClick={theme} className="headerLogo" alt="theme" />}
                 </div>
             </div>
-            <section className="siteLinks">
+            <nav className="topNav">
                 <NavHashLink to="/#profile">Profile</NavHashLink>
                 <NavHashLink to="/#aboutMe">About Me</NavHashLink>
                 <NavHashLink to="/#portfolio">Portfolio</NavHashLink>
                 <NavHashLink to="/#service">Services</NavHashLink>
                 <NavHashLink to="/#findMe">Find Me</NavHashLink>
-            </section>
+            </nav>
         </header>
     );
 }

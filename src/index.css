@@ -1,8 +1,8 @@
 :root {
-    --primaryColor: #404258;
-    --secondaryColour: #474E68;
-    --tetiaryColor: #50577A;
-    --textColour: #6B728E;
+    --primaryColor: #FAF1E6;
+    --secondaryColour: #FDFAF6;
+    --tetiaryColor: #E4EFE7;
+    --textColour: #064420;
 }
 [data-theme='dark'] {
     --primaryColor: #232323;
@@ -52,6 +52,7 @@ button {
 
 hr{
     color: var(--tetiaryColor);
+    width:100%;
 }
 
 .App {
@@ -69,22 +70,22 @@ header {
     top: 0;
     z-index: 999;
     background-color: var(--primaryColor);
-    height: 4rem;
+    height: 5rem;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content:space-around;
     width: 100%;
-    margin-bottom: 2rem;
 }
-.siteLinks{
+header a {
+    margin: 0 0.5rem;
+}
+.topNav, .siteLinks {
     width: auto;
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
+    height: 100%;
     align-items: center;
-}
-.siteLinks a {
-    margin: 0 0.5rem;
 }
 .headerButton {
     margin: 2rem;
@@ -122,14 +123,16 @@ header {
     }
 .writing {
     display:flex;
-    flex-direction: row;
-    justify-content:flex-start;
+    flex-direction: column;
+    justify-content:center;
     align-items: center;
+    padding:0 20% 0 0;
     height: 100%;
     width: 50%;
-    font-size: 55px;
 }
-
+.upper{
+    font-size: 60px;
+}
 #aboutMe {
     background-image: linear-gradient(to bottom left, var(--secondaryColour), var(--primaryColor));
     height: 25rem;
@@ -238,4 +241,29 @@ footer div{
     width:auto;
     display:flex;
     align-items:center;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 770px) and (orientation: portrait) {
+    
+}
+
+/* Small devices on landscape */
+@media only screen and (min-width: 769px) and (max-width: 992px) and (orientation: landscape) {
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 770px) and (max-width: 992px) and (orientation: portrait) {
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
 }

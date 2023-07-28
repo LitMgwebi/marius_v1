@@ -10,8 +10,9 @@ function Profile() {
                 />
             </section>
             <section className="writing">
-                <h1 style={{ fontSize: '55px' }}>My Name Is <hr /> Marius Edel
-                </h1>
+                <h1 className="lower">My Name Is</h1>
+                <hr />
+                    <h1 className="upper">Marius Edel</h1>
             </section>
         </div>
     );
