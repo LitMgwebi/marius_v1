@@ -7,7 +7,11 @@ function Service() {
             <div className='idea'>
                 <section className="development">
                     <div className="ideaImage">
-                        <img src={require("../../media/idea.png")} alt="Idea Development" />
+                        <img
+                            src={require("../../media/idea.png")}
+                            alt="Idea Development"
+                            className="serviceLogo"
+                        />
                     </div>
                     <h2>Idea Development</h2>
                     <h3>
@@ -17,7 +21,11 @@ function Service() {
                 </section>
                 <section className="execution">
                     <div className="ideaImage">
-                        <img src={require("../../media/Computer.png")} alt="Idea Execution" />
+                        <img
+                            src={require("../../media/Computer.png")}
+                            alt="Idea Execution"
+                            className="serviceLogo"
+                        />
                     </div>
                     <h2>Idea Execution</h2>
                     <h3>

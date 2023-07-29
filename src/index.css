@@ -2,12 +2,14 @@
     --primaryColor: #FAF1E6;
     --secondaryColour: #FDFAF6;
     --tetiaryColor: #E4EFE7;
+    --logoColor: invert(89%) sepia(9%) saturate(286%) hue-rotate(156deg) brightness(111%) contrast(87%);
     --textColour: #064420;
 }
 [data-theme='dark'] {
     --primaryColor: #232323;
     --secondaryColour: #4f4e4e;
     --tetiaryColor: #3bce4e;
+    --logoColor: invert(65%) sepia(10%) saturate(3172%) hue-rotate(77deg) brightness(103%) contrast(81%);
     --textColour: #ffffff;
 }
 
@@ -48,11 +50,6 @@ button {
     font-size: 1rem;
     border-radius: 1rem;
     margin: 1rem
-}
-
-hr{
-    color: var(--tetiaryColor);
-    width:100%;
 }
 
 .App {
@@ -98,6 +95,7 @@ header a {
 .headerLogo {
     width: 1.2rem;
     height: 1.2rem;
+    filter: var(--logoColor);
 }
     .headerLogo:hover {
         width: 1.45rem;
@@ -121,6 +119,10 @@ header a {
         width: auto;
         border-radius: 5rem;
     }
+hr {
+    color: var(--tetiaryColor);
+    width: 100%;
+}
 .writing {
     display:flex;
     flex-direction: column;
@@ -133,6 +135,7 @@ header a {
 .upper{
     font-size: 60px;
 }
+
 #aboutMe {
     background-image: linear-gradient(to bottom left, var(--secondaryColour), var(--primaryColor));
     height: 25rem;
@@ -148,7 +151,6 @@ header a {
     justify-content: center;
     width: 65%;
 }
-
 
 #portfolio {
     background-image: linear-gradient(to bottom right, var(--primaryColor), var(--secondaryColour));
@@ -197,16 +199,17 @@ header a {
         width: 60%;
         text-align: center;
     }
+.serviceLogo {
+    width: auto;
+    height: 10rem;
+}
 .ideaImage {
-    width: 35%;
+    width: auto;
     padding: 1rem;
-    height: 35%;
+    height: auto;
     display: flex;
     justify-content: center;
-} 
-    .ideaImage img {
-        width: auto;
-    }
+}
 
 #findMe {
     background-image: linear-gradient(to bottom right, var(--primaryColor), var(--secondaryColour));
@@ -246,7 +249,94 @@ footer div{
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    
+    h1 {
+        font-size: 30px
+    }
+    h2 {
+        font-size: 23px
+    }
+    h3 {
+        font-size: 15px;
+    }
+    button {
+        padding: 0.8rem;
+        margin: 0.5rem
+    }
+
+    #profile {
+        flex-direction: column;
+        height: auto;
+        margin: 0rem 0 0;
+    }
+    .image {
+        width: 20rem;
+        height: 20rem;
+    }
+        .image img {
+            width: 75%;
+            border-radius: 2rem;
+        }
+    hr {
+        width: 50%;
+    }
+    .writing {
+        padding: 0;
+        text-align:center;
+        height: auto;
+        width: 100%;
+    }
+    .lower{
+        margin:1rem;
+    }
+    .upper {
+        font-size: 50px;
+        margin: 1.5rem;
+    }
+
+    #aboutMe {
+        height: auto;
+    }
+    .aboutMeWriting {
+        width: 60%;
+    }
+
+    #portfolio {
+        height: auto;
+    }
+    .swiper {
+        height: 20rem;
+        width: 60%;
+    }
+
+    .idea {
+        flex-direction: column;
+        height: auto;
+    }
+    .execution, .development {
+        width: 80%;
+    }
+    .idea h2{
+        margin: 0.5rem;
+    }
+    .serviceLogo {
+        width: auto;
+        height: 6rem;
+    }
+
+    #items {
+        height: auto;
+        padding: 0 0 2rem;
+    }
+    .itemSwiper {
+        height: 20rem;
+        width: 75%;
+        margin: 1rem 0;
+
+    }
+
+    footer {
+        height: 6rem;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
