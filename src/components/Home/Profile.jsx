@@ -1,6 +1,9 @@
 /* eslint-disable react/style-prop-object */
 /* eslint-disable jsx-a11y/alt-text */
+import { useTranslation } from "react-i18next";
+
 function Profile() {
+    const { t } = useTranslation();
     return (
         <div id="profile">
             <section className="image">
@@ -10,7 +13,7 @@ function Profile() {
                 />
             </section>
             <section className="writing">
-                <h1 className="lower">My Name Is</h1>
+                <h1 className="lower">{t("intro")}</h1>
                 <hr />
                     <h1 className="upper">Marius Edel</h1>
             </section>

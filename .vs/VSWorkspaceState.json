@@ -1,5 +1,10 @@
 {
-  "ExpandedNodes": [],
-  "SelectedNode": "\\src\\components\\PageEnvelope\\Header.jsx",
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\Services"
+  ],
+  "SelectedNode": "\\src\\index.js",
   "PreviewInSolutionExplorer": false
 }

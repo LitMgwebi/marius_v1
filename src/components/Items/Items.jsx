@@ -4,12 +4,16 @@ import { Link } from "react-router-dom"
 import "swiper/css";
 import 'swiper/css/grid';
 import 'swiper/css/pagination';
+import { useTranslation } from "react-i18next";
+
 function Items() {
+    const { t } = useTranslation();
+
     return (
         <div id="items">
-            <h1>Portfolio</h1>
+            <h1>{t("portfolio")}</h1>
             <div className="buttonGroup">
-                <button><Link to="/">Back</Link></button>
+                <button><Link to="/">{ t("back")}</Link></button>
             </div>
             <div className="swiper-slide">
                 <Swiper

@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCards, Pagination, Autoplay } from "swiper/modules";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom"
 import "swiper/css";
 import "swiper/css/effect-cards";
@@ -7,9 +8,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 function Portfolio() {
+    const { t } = useTranslation();
     return (
         <div id="portfolio">
-            <h1>Portfolio</h1>
+            <h1>{ t("portfolio")}</h1>
             <div className="swiper-slide">
                 <Swiper
                     effect={"cards"}

@@ -183,6 +183,10 @@ hr {
     justify-content:center;
     align-items: center;
 }
+.idea h3 {
+    width: 60%;
+    text-align: center;
+}
 .execution, .development{
     height:100%;
     width:35%;
@@ -191,14 +195,6 @@ hr {
     justify-content:flex-start;
     align-items: center;
 }
-    .execution h3{
-        width: 70%;
-        text-align: center;
-    }
-    .development h3 {
-        width: 60%;
-        text-align: center;
-    }
 .serviceLogo {
     width: auto;
     height: 10rem;

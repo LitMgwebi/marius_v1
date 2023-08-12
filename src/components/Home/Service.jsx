@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function Service() {
+    const { t } = useTranslation();
     return (
         <div id="service">
-            <h1>Services</h1>
+            <h1>{t("services")}</h1>
             <div className='idea'>
                 <section className="development">
                     <div className="ideaImage">
@@ -13,10 +15,9 @@ function Service() {
                             className="serviceLogo"
                         />
                     </div>
-                    <h2>Idea Development</h2>
+                    <h2>{t("development")}</h2>
                     <h3>
-                        You have an idea but don't know
-                        how to realize it? <br />I will help you
+                        {t("developmentParagraph")}
                     </h3>
                 </section>
                 <section className="execution">
@@ -27,17 +28,15 @@ function Service() {
                             className="serviceLogo"
                         />
                     </div>
-                    <h2>Idea Execution</h2>
+                    <h2>{t("execution")}</h2>
                     <h3>
-                        The best idea are worthless without
-                        execution. <br/>I will build your custom
-                        Excel sheet.
+                        {t("executionParagraph")}
                     </h3>
                 </section>
             </div>
 
             <div className="buttonGroup">
-                <button><Link to="/portfolio">View Menu</Link></button>
+                <button><Link to="/portfolio">{ t("viewMore")}</Link></button>
             </div>
         </div>
     )
