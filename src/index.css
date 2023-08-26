@@ -78,11 +78,17 @@ header a {
     margin: 0 0.5rem;
 }
 .topNav, .siteLinks {
-    width: auto;
+    width: 50%;
     display: flex;
     flex-direction: row;
     height: 100%;
     align-items: center;
+}
+.siteLinks{
+    justify-content:center
+}
+.topNav {
+    justify-content: flex-end
 }
 .headerButton {
     margin: 2rem;
@@ -95,12 +101,26 @@ header a {
 .headerLogo {
     width: 1.2rem;
     height: 1.2rem;
-    filter: var(--logoColor);
+    filter: var(--textColour);
 }
     .headerLogo:hover {
         width: 1.45rem;
         height: 1.45rem;
     }
+.langChange select{
+    background-color: var(--secondaryColour);
+    border-block-width: 0
+}
+.nav-btn{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--textColour);
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.8rem;
+}
 
 #profile {
     background-image: linear-gradient(to bottom right, var(--primaryColor), var(--secondaryColour));
@@ -257,6 +277,41 @@ footer div{
     button {
         padding: 0.8rem;
         margin: 0.5rem
+    }
+
+    .siteLinks {
+        justify-content: center;
+        width: 80%;
+    }
+    .topNav {
+        justify-content: flex-end;
+        width: 20%;
+    }
+    .nav-btn{
+        visibility: visible;
+        opacity: 1;
+    }
+    .nav {
+        position: fixed;
+        top: -100vh;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: var(--primaryColor);
+        transition: 1s;
+    }
+    .responsive_nav {
+        transform: translateY(100vh);
+    }
+    nav .nav-close-btn {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
     }
 
     #profile {

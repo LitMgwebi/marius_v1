@@ -35,7 +35,7 @@ i18n
                     portfolio: "Portfolio",
                     services: "Dienstleistungen",
                     findMe: "Finde mich",
-                    aboutMeParagraph: "Hallo, ich bin Marius Edel und ein deutscher Student umfangreiche Erfahrung in der Datenanalyse, Automatisierung und Visualisierung.Ich kann Ihnen helfen Optimieren Sie Ihren Arbeitsablauf und verbessern Sie ihn Produktivität mit maßgeschneiderten Excel- Tabellen und VBA- Makros.Ich setze mich für die Bereitstellung ein Hochwertige Lösungen, pünktliche Lieferung und großartig Kundendienst.Kontaktieren Sie mich, um zu sehen, wie ich es kann helfen Ihnen bei Ihren Datenanforderungen.",
+                    aboutMeParagraph: "Hallo, ich bin Marius Edel und ich bin ein deutscher Student mit umfangreicher Erfahrung in der Datenanalyse, Automatisierung und Visualisierung. Ich kann Ihnen helfen, Ihre Arbeitsabläufe zu rationalisieren und die Produktivität mit angepassten Excel-Tabellen und VBA-Makros zu verbessern. Ich bin bestrebt, qualitativ hochwertige Lösungen, pünktliche Lieferung und einen großartigen Kundenservice zu bieten.Kontaktieren Sie mich, um zu sehen, wie ich Ihnen bei Ihren Datenanforderungen helfen kann.",
                     development: "Ideenentwicklung",
                     execution: "Ideenausführung",
                     developmentParagraph: "Sie haben eine Idee, wissen aber nicht, wie Sie diese umsetzen können? ich werde dir helfe",

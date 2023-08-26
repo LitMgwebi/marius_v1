@@ -1,6 +1,6 @@
 This favicon was generated using the following font:
 
-- Font Title: Jaldi
-- Font Author: Copyright (c) 2011-2015, Omnibus-Type (www.omnibus-type.com omnibus.type@gmail.com) with Reserved Font Name 'Jaldi' and 'Asap'
-- Font Source: http://fonts.gstatic.com/s/jaldi/v12/or3sQ67z0_CI30NUZpD_B6g8.ttf
+- Font Title: Comfortaa
+- Font Author: Copyright 2011 The Comfortaa Project Authors (https://github.com/alexeiva/comfortaa), with Reserved Font Name "Comfortaa".
+- Font Source: http://fonts.gstatic.com/s/comfortaa/v40/1Pt_g8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMPrQVIT9c2c8.ttf
 - Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

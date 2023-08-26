@@ -3,8 +3,8 @@
     "",
     "\\src",
     "\\src\\components",
-    "\\src\\components\\Services"
+    "\\src\\components\\PageEnvelope"
   ],
-  "SelectedNode": "\\src\\index.js",
+  "SelectedNode": "\\src\\components\\PageEnvelope\\Header.jsx",
   "PreviewInSolutionExplorer": false
 }
