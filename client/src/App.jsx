@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Items from "./components/Items/Items";
 import useLocalStorage from "use-local-storage";
+import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 
 function App() {
     const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -18,16 +19,18 @@ function App() {
         setTheme(newTheme);
     }
     return (
-        <div className="App" data-theme={theme}>
-            <BrowserRouter>
-                <Header theme={switchTheme} imgIcon={theme} />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/portfolio" element={<Items /> }/>
-                </Routes>
-                <Footer />
-            </BrowserRouter>
-        </div>
+        <PayPalScriptProvider option={{ "client-id": process.env.REACT_APP_PAYPAL_CLIENT_ID }}>
+            <div className="App" data-theme={theme}>
+                <BrowserRouter>
+                    <Header theme={switchTheme} imgIcon={theme} />
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/portfolio" element={<Items />} />
+                    </Routes>
+                    <Footer />
+                </BrowserRouter>
+            </div>
+        </PayPalScriptProvider>
     );
 }
 

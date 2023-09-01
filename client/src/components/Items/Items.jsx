@@ -5,10 +5,15 @@ import "swiper/css";
 import 'swiper/css/grid';
 import 'swiper/css/pagination';
 import { useTranslation } from "react-i18next";
+import PaypalCheckoutButton from "./PaypalCheckoutButton";
 
 function Items() {
     const { t } = useTranslation();
 
+    const product = {
+        description: "First discription",
+        price: 20
+    }
     return (
         <div id="items">
             <h1>{t("portfolio")}</h1>
@@ -25,8 +30,11 @@ function Items() {
                     className="itemSwiper"
                 >
                     <SwiperSlide className="slide">
-                        <div>
+                        <div className="paypal-button-container">
                             This is slide 1
+                            Dont know what else to say
+                            <PaypalCheckoutButton product={product} />
+                            
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="slide">
