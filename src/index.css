@@ -264,16 +264,19 @@ footer div{
 
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 770px) {
     h1 {
         font-size: 30px
     }
+
     h2 {
         font-size: 23px
     }
+
     h3 {
         font-size: 15px;
     }
+
     button {
         padding: 0.8rem;
         margin: 0.5rem
@@ -283,11 +286,150 @@ footer div{
         justify-content: center;
         width: 80%;
     }
+
     .topNav {
         justify-content: flex-end;
         width: 20%;
     }
-    .nav-btn{
+
+    .nav-btn {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .nav {
+        position: fixed;
+        top: -100vh;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: var(--primaryColor);
+        transition: 1s;
+    }
+
+    .responsive_nav {
+        transform: translateY(100vh);
+    }
+
+    nav .nav-close-btn {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    #profile {
+        flex-direction: column;
+        height: auto;
+        margin: 0rem 0 0;
+    }
+
+    .image {
+        width: 20rem;
+        height: 20rem;
+    }
+
+        .image img {
+            width: 75%;
+            border-radius: 2rem;
+        }
+
+    hr {
+        width: 50%;
+    }
+
+    .writing {
+        padding: 0;
+        text-align: center;
+        height: auto;
+        width: 100%;
+    }
+
+    .lower {
+        margin: 1rem;
+    }
+
+    .upper {
+        font-size: 50px;
+        margin: 1.5rem;
+    }
+
+    #aboutMe {
+        height: auto;
+    }
+
+    .aboutMeWriting {
+        width: 60%;
+    }
+
+    #portfolio {
+        height: auto;
+    }
+
+    .swiper {
+        height: 20rem;
+        width: 60%;
+    }
+
+    .idea {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .execution, .development {
+        width: 80%;
+    }
+
+    .idea h2 {
+        margin: 0.5rem;
+    }
+
+    .serviceLogo {
+        width: auto;
+        height: 6rem;
+    }
+
+    #items {
+        height: auto;
+        padding: 0 0 2rem;
+    }
+
+    .itemSwiper {
+        height: 20rem;
+        width: 75%;
+        margin: 1rem 0;
+    }
+
+    footer {
+        height: 6rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up)
+@media only screen and (min-width: 600px) and (max-width: 770px) and (orientation: portrait) {
+    
+}*/
+
+/* Small devices on landscape */
+@media only screen and (min-width: 769px) and (max-width: 992px) and (orientation: landscape) {
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 770px) and (max-width: 992px) and (orientation: portrait) {
+    .siteLinks{
+        width: 70%;
+        justify-content: center;
+    }
+    .topNav {
+        justify-content: center;
+        width: 30%;
+    }
+    .nav-btn {
         visibility: visible;
         opacity: 1;
     }
@@ -314,95 +456,54 @@ footer div{
         right: 2rem;
     }
 
-    #profile {
-        flex-direction: column;
-        height: auto;
-        margin: 0rem 0 0;
-    }
     .image {
-        width: 20rem;
-        height: 20rem;
-    }
-        .image img {
-            width: 75%;
-            border-radius: 2rem;
-        }
-    hr {
-        width: 50%;
+        width: 55%;
+        height: 85%;
     }
     .writing {
-        padding: 0;
-        text-align:center;
-        height: auto;
-        width: 100%;
+        text-align: center;
     }
-    .lower{
-        margin:1rem;
-    }
-    .upper {
-        font-size: 50px;
-        margin: 1.5rem;
-    }
-
+    
     #aboutMe {
-        height: auto;
+        height: 32rem;
     }
     .aboutMeWriting {
-        width: 60%;
+        width: 70%;
     }
 
-    #portfolio {
-        height: auto;
-    }
     .swiper {
-        height: 20rem;
-        width: 60%;
+        margin: 2%;
+        height: 75%;
+        width: 75%;
     }
 
-    .idea {
-        flex-direction: column;
+    #service {
         height: auto;
+        padding: 2rem 0
     }
+    .idea {
+        height: 32rem;
+    }
+        .idea h3 {
+            width: 70%;
+        }
     .execution, .development {
-        width: 80%;
-    }
-    .idea h2{
-        margin: 0.5rem;
+        height: 100%;
+        width: 45%;
     }
     .serviceLogo {
         width: auto;
-        height: 6rem;
+        height: 11rem;
     }
 
     #items {
-        height: auto;
-        padding: 0 0 2rem;
+        height: 90%;
     }
+
     .itemSwiper {
-        height: 20rem;
+        height: 65%;
         width: 75%;
-        margin: 1rem 0;
-
     }
-
-    footer {
-        height: 6rem;
-    }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) and (max-width: 770px) and (orientation: portrait) {
-    
-}
-
-/* Small devices on landscape */
-@media only screen and (min-width: 769px) and (max-width: 992px) and (orientation: landscape) {
-    
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 770px) and (max-width: 992px) and (orientation: portrait) {
-    
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
