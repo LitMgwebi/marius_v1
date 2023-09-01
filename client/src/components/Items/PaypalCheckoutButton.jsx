@@ -1,63 +1,88 @@
 import { PayPalButtons } from "@paypal/react-paypal-js";
 import { useState } from "react";
-import { redirect } from "react-router";
 
 function PaypalCheckoutButton(props) {
-    const { product } = props
-    const [paidFor, setPaidFor] = useState(false);
-    const [error, setError] = useState(null);
+    const { product } = props;
+    const [status, SetStatus] = useState("");
 
-    const handleApprove = (orderId) => {
-        // Call backend function to fulfill order
+    const createOrder = async() => {
+        try{
+            const response = await fetch("/server/orders", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    cart: [{
+                        id: product.id,
+                        quantity: product.quantity
+                    },],
+                }),
+            });
 
-        // if success
-        setPaidFor(true);
-        // Refresh user's acc status
+            const orderData = await response.json();
 
-        // If reponse is error
-        // SetError("Your Payment was processed successfully. However, we are ubale to convert your...")
+            if (orderData.id) {
+                alert("Order has been created");
+                return orderData.id;
+            } else {
+                const result = orderData.details?.[0];
+                SetStatus(result ? `{result.issue} ${result.description} ${result.debug_id}` : JSON.stringify(orderData));
+
+                throw new Error(status);
+            }
+        }catch(error){
+            console.error(error);
+            SetStatus(error.message);
+            alert("Could not initiate Paypal Checkout");
+        }
     };
 
-    if(paidFor){
-        //Display success message, model or redirect user to success page
-        redirect('/portfolio')
-        alert("Thank you for your purchase");
-    }
+    const handleApprove = async(data, actions) => {
+        try {
+            const response = await fetch(`/server/orders/${data.orderID}/capture`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
+            const orderData = await response.json();
+            const errorDetail = orderData?.details?.[0];
 
-    if(error){
-        //Display error message or redirect user to error page.
-        redirect('/portfolio')
-        alert(error);
-    }
+            if(errorDetail?.issue === "INSTRUMENT_DECLINED"){
+                SetStatus("Instrument Declined, restarting action now");
+                alert(status);
+                return actions.restart();
+            } else if (errorDetail) {
+                throw new Error(`${errorDetail.description} (${orderData.debug_id})`);
+            } else if (!orderData.purchase_units){
+                throw new Error(JSON.stringify(orderData));
+            } else {
+                const transaction = orderData?.purchase_units?.[0]?.payments?.captures?.[0] || orderData?.purchase_units?.[0]?.payments?.authorizations?.[0];
+                SetStatus(`Transaction: ${transaction.status}: ${transaction.id}`);
+                console.log("Capture result", orderData, JSON.stringify(orderData, null, 2),);
+            }
+        } catch(error) {
+            console.error(error);
+            SetStatus(error.message);
+            alert("Could not process transaction");
+        }
+    };
+
+    const handleCancel = () => {
+
+    };
+
+    const handleError = () => {
+
+    };
 
     return (
         <PayPalButtons
-            createOrder={(data, actions) => {
-                return actions.order.create({
-                    purchase_units: [
-                        {
-                            description: product.description,
-                            amount: {
-                                value: product.price
-                            }
-                        }
-                    ]
-                })
-            }}
-            onApprove={async(data, actions) => {
-                const order = await actions.order.capture();
-                console.log("order, ", order);
-
-                handleApprove(data.orderID);
-            }}
-            onCancel={() => {
-                //Display Cancel message, model or redirect user to cancel page
-                redirect("/portfolio");
-            }}
-            onError={(err) => {
-                setError(err);
-                console.error("Paypal error: " + err);
-            }}
+            createOrder={createOrder}
+            onApprove={handleApprove}
+            onCancel={handleCancel}
+            onError={handleError}
         />
     );
 }
