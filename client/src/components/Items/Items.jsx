@@ -12,7 +12,8 @@ function Items() {
 
     const product = {
         description: "First discription",
-        price: 20
+        quantity: "20.00",
+        currency: 'USD',
     }
     return (
         <div id="items">
@@ -22,7 +23,7 @@ function Items() {
             </div>
             <div className="swiper-slide">
                 <Swiper
-                    slidePerView={3}
+                    slideperview={3}
                     grid={{ rows: 2, }}
                     spacebetween={30}
                     pagination={{ clickable: true, }}
