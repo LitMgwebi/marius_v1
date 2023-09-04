@@ -107,9 +107,16 @@ header a {
         width: 1.45rem;
         height: 1.45rem;
     }
-.langChange select{
+select{
+    display:block;
     background-color: var(--secondaryColour);
-    border-block-width: 0
+    border-color: var(--secondaryColour);
+    border-radius: 0.5rem;
+    text-align: center;
+    border-block-width: 0;
+    transition: all 250ms ease;
+    width: 7rem;
+    height: 2rem;
 }
 .nav-btn{
     cursor: pointer;
@@ -227,7 +234,7 @@ hr {
     justify-content: center;
 }
 
-#findMe {
+#socials {
     background-image: linear-gradient(to bottom right, var(--primaryColor), var(--secondaryColour));
     height: 22rem;
     display: flex;
@@ -283,7 +290,7 @@ footer div{
     }
 
     .siteLinks {
-        justify-content: center;
+        justify-content: space-evenly;
         width: 80%;
     }
 

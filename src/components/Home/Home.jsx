@@ -1,7 +1,7 @@
 import Profile from "./Profile";
 import Portfolio from "./Portfolio";
 import Service from "./Service";
-import FindMe from "./FindMe";
+import Socials from "./Socials";
 import AboutMe from "./AboutMe";
 
 function Home() {
@@ -11,7 +11,7 @@ function Home() {
             <AboutMe/>
             <Portfolio />
             <Service />
-            <FindMe />
+            <Socials />
         </div>
     );
 }

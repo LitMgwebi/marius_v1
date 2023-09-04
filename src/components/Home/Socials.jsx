@@ -1,12 +1,12 @@
 import { useTranslation } from "react-i18next";
 
-function FindMe() {
+function Socials() {
     const { t } = useTranslation();
     return (
-        <div id="findMe">
-            <h1>{t("findMe")}</h1>
+        <div id="socials">
+            <h1>{t("socials")}</h1>
         </div>
     )
 }
 
-export default FindMe;
+export default Socials;
