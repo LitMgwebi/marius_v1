@@ -116,7 +116,7 @@ select{
     border-block-width: 0;
     transition: all 250ms ease;
     width: 7rem;
-    height: 2rem;
+    height: 1.8rem;
 }
 .nav-btn{
     cursor: pointer;
@@ -163,8 +163,12 @@ hr {
     font-size: 60px;
 }
 
-#aboutMe {
+#animation {
     background-image: linear-gradient(to bottom left, var(--secondaryColour), var(--primaryColor));
+}
+
+#aboutMe {
+    background-image: linear-gradient(to bottom right, var(--primaryColor), var(--secondaryColour));
     height: 25rem;
     display: flex;
     justify-content: flex-start;
@@ -180,7 +184,7 @@ hr {
 }
 
 #portfolio {
-    background-image: linear-gradient(to bottom right, var(--primaryColor), var(--secondaryColour));
+    background-image: linear-gradient(to bottom left, var(--secondaryColour), var(--primaryColor));
     height: 32rem;
     display: flex;
     flex-flow: column;
@@ -195,8 +199,8 @@ hr {
 }
 
 #service {
+    background-image: linear-gradient(to bottom right, var(--primaryColor), var(--secondaryColour));
     height: auto;
-    background-image: linear-gradient(to bottom left, var(--secondaryColour), var(--primaryColor));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -235,7 +239,7 @@ hr {
 }
 
 #socials {
-    background-image: linear-gradient(to bottom right, var(--primaryColor), var(--secondaryColour));
+    background-image: linear-gradient(to bottom left, var(--secondaryColour), var(--primaryColor));
     height: 22rem;
     display: flex;
     justify-content: center;

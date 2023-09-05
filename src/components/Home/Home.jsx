@@ -3,12 +3,16 @@ import Portfolio from "./Portfolio";
 import Service from "./Service";
 import Socials from "./Socials";
 import AboutMe from "./AboutMe";
+import Animation from "./Animation";
 
 function Home() {
     return (
         <div id="home">
             <Profile />
-            <AboutMe/>
+            <div id="animation">
+                <Animation />
+            </div>
+            <AboutMe />
             <Portfolio />
             <Service />
             <Socials />

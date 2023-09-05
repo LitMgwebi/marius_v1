@@ -50,7 +50,7 @@ function Header({ theme, imgIcon }) {
                     <NavHashLink to="/#aboutMe" onClick={showNavBar}>{t("aboutMe")}</NavHashLink>
                     <NavHashLink to="/#portfolio" onClick={showNavBar}>{t("portfolio")}</NavHashLink>
                     <NavHashLink to="/#service" onClick={showNavBar}>{t("services")}</NavHashLink>
-                    <NavHashLink to="/#findMe" onClick={showNavBar}>{t("findMe")}</NavHashLink>
+                    <NavHashLink to="/#findMe" onClick={showNavBar}>{t("socials")}</NavHashLink>
                     <button className="nav-btn nav-close-btn" onClick={showNavBar}>
                         <FaTimes />
                     </button>
