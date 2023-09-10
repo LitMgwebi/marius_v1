@@ -3,15 +3,15 @@ import Portfolio from "./Portfolio";
 import Service from "./Service";
 import Socials from "./Socials";
 import AboutMe from "./AboutMe";
-import Animation from "./Animation";
+// import Animation from "./Animation";
 
 function Home() {
     return (
         <div id="home">
             <Profile />
-            <div id="animation">
+            {/* <div id="animation">
                 <Animation />
-            </div>
+            </div> */}
             <AboutMe />
             <Portfolio />
             <Service />

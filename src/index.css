@@ -168,7 +168,7 @@ hr {
 }
 
 #aboutMe {
-    background-image: linear-gradient(to bottom right, var(--primaryColor), var(--secondaryColour));
+    background-image: linear-gradient(to bottom left, var(--secondaryColour), var(--primaryColor));
     height: 25rem;
     display: flex;
     justify-content: flex-start;
@@ -184,7 +184,7 @@ hr {
 }
 
 #portfolio {
-    background-image: linear-gradient(to bottom left, var(--secondaryColour), var(--primaryColor));
+    background-image: linear-gradient(to bottom right, var(--primaryColor), var(--secondaryColour));
     height: 32rem;
     display: flex;
     flex-flow: column;
@@ -199,7 +199,7 @@ hr {
 }
 
 #service {
-    background-image: linear-gradient(to bottom right, var(--primaryColor), var(--secondaryColour));
+    background-image: linear-gradient(to bottom left, var(--secondaryColour), var(--primaryColor));
     height: auto;
     display: flex;
     flex-direction: column;
@@ -239,7 +239,7 @@ hr {
 }
 
 #socials {
-    background-image: linear-gradient(to bottom left, var(--secondaryColour), var(--primaryColor));
+    background-image: linear-gradient(to bottom right, var(--primaryColor), var(--secondaryColour));
     height: 22rem;
     display: flex;
     justify-content: center;
