@@ -5,7 +5,7 @@ import Socials from "./Socials";
 import AboutMe from "./AboutMe";
 // import Animation from "./Animation";
 
-function Home() {
+function Home({theme}) {
     return (
         <div id="home">
             <Profile />
@@ -13,9 +13,9 @@ function Home() {
                 <Animation />
             </div> */}
             <AboutMe />
-            <Portfolio />
+            <Portfolio theme={theme}/>
             <Service />
-            <Socials />
+            <Socials theme={theme}/>
         </div>
     );
 }

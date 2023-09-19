@@ -26,7 +26,7 @@ function App() {
                 <BrowserRouter>
                     <Header theme={switchTheme} imgIcon={theme} />
                     <Routes>
-                        <Route path="/" element={<Home />} />
+                        <Route path="/" element={<Home theme={theme}/>} />
                         <Route path="/portfolio" element={<Items />} />
                     </Routes>
                     <Footer />
