@@ -32,37 +32,37 @@ function Portfolio({ theme }) {
                     modules={[EffectCards, Pagination, Autoplay]}
                     className="swiper"
                 >
-                    <SwiperSlide className="slide">
-                        <div>
-                            {theme === "dark" ? <img src={dark1} onClick={theme} alt="theme" />
-                                : <img src={light1} onClick={theme} alt="theme" />}
+                    <SwiperSlide>
+                        <div className="slide">
+                            {theme === "dark" ? <img src={dark1} alt="theme" />
+                                : <img src={light1} alt="theme" />}
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide className="slide">
-                        <div>
-                            {theme === "dark" ? <img src={dark2} onClick={theme} alt="theme" />
-                                : <img src={light2} onClick={theme} alt="theme" />}
+                    <SwiperSlide>
+                        <div className="slide">
+                            {theme === "dark" ? <img src={dark2}alt="theme" />
+                                : <img src={light2} alt="theme" />}
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide className="slide">
-                        <div>
-                            {theme === "dark" ? <img src={dark3} onClick={theme} alt="theme" />
-                                : <img src={light3} onClick={theme} alt="theme" />}
+                    <SwiperSlide>
+                        <div className="slide">
+                            {theme === "dark" ? <img src={dark3} alt="theme" />
+                                : <img src={light3} alt="theme" />}
                         </div>
                     </SwiperSlide>
 
-                    <SwiperSlide className="slide">
-                        <div>
-                            {theme === "dark" ? <img src={dark4} onClick={theme} alt="theme" />
-                                : <img src={light4} onClick={theme} alt="theme" />}
+                    <SwiperSlide>
+                        <div className="slide">
+                            {theme === "dark" ? <img src={dark4} alt="theme" />
+                                : <img src={light4} alt="theme" />}
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide className="slide">
+                    <SwiperSlide>
+                        <div className="slide">
                         <Link to="/portfolio">
-                            <div>
                                 See More
-                            </div>
                         </Link>
+                        </div>
                     </SwiperSlide>
                 </Swiper>
             </div>

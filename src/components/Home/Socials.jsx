@@ -11,27 +11,29 @@ function Socials({ theme }) {
     const { t } = useTranslation();
     return (
         <div id="socials">
-            <h1>{t("socials")}</h1>
+            <div>            
+                <h1>{t("socials")}</h1>
+            </div>
             <section>
                 <div className="socialLink">
                     <Link>
-                        {theme === "dark" ? <img src={etsyDark} onClick={theme} alt="theme" />
-                            : <img src={etsyLight} onClick={theme} alt="theme" />}
+                        {theme === "dark" ? <img src={etsyDark} alt="etsyDark" />
+                            : <img src={etsyLight} alt="etsyLight" />}
                     </Link>
                 </div>
 
                 <div className="socialLink">
                     <Link>
-                        {theme === "dark" ? <img src={instaDark} onClick={theme} alt="theme" />
-                            : <img src={instaLight} onClick={theme} alt="theme" />}
+                        {theme === "dark" ? <img src={instaDark} alt="instaDark" />
+                            : <img src={instaLight} alt="instaLight" />}
                     </Link>
                 </div>
 
                 <div className="socialLink">
                     <Link href="">
                         {theme === "dark" ?
-                            <img src={linkedinDark} onClick={theme} alt="theme" />
-                            : <img src={linkedinLight} onClick={theme} alt="theme" />}
+                            <img src={linkedinDark} alt="linkedinDark" />
+                            : <img src={linkedinLight} alt="linkedinLight" />}
                     </Link>
                 </div>
             </section>
