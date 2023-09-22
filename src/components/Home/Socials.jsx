@@ -16,21 +16,21 @@ function Socials({ theme }) {
             </div>
             <section>
                 <div className="socialLink">
-                    <Link>
+                    <Link to="https://www.etsy.com/de-en/shop/ExcelEmpire">
                         {theme === "dark" ? <img src={etsyDark} alt="etsyDark" />
                             : <img src={etsyLight} alt="etsyLight" />}
                     </Link>
                 </div>
 
                 <div className="socialLink">
-                    <Link>
+                    <Link to="https://instagram.com/ma.r.i.u.s?igshid=OGQ5ZDc2ODk2ZA==">
                         {theme === "dark" ? <img src={instaDark} alt="instaDark" />
                             : <img src={instaLight} alt="instaLight" />}
                     </Link>
                 </div>
 
                 <div className="socialLink">
-                    <Link href="">
+                    <Link to="https://www.linkedin.com/in/marius-edel-4a6955227/">
                         {theme === "dark" ?
                             <img src={linkedinDark} alt="linkedinDark" />
                             : <img src={linkedinLight} alt="linkedinLight" />}

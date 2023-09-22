@@ -1,6 +1,7 @@
 import Header from "./components/PageEnvelope/Header";
 import Footer from "./components/PageEnvelope/Footer";
 import Home from "./components/Home/Home";
+import Copyright from "./components/Copyright/Copyright";
 import {
     BrowserRouter,
     Routes,
@@ -28,6 +29,7 @@ function App() {
                     <Routes>
                         <Route path="/" element={<Home theme={theme}/>} />
                         <Route path="/portfolio" element={<Items theme={theme}/>} />
+                        <Route path="/copyright" element={<Copyright/>}/>
                     </Routes>
                     <Footer />
                 </BrowserRouter>

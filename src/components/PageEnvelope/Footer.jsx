@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Footer() {
     return (
         <footer>
@@ -6,6 +8,13 @@ function Footer() {
             </div>
             <div>
                 <p>2023.07</p>
+            </div>
+            <div>
+                <Link to="/copyright">
+                    <button>
+                        Copyright
+                    </button>
+                </Link>
             </div>
         </footer>
     )
