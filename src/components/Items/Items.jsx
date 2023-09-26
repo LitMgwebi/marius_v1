@@ -1,8 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Grid, Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import { Link } from "react-router-dom"
 import "swiper/css";
-import 'swiper/css/grid';
+import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { useTranslation } from "react-i18next";
 import dark1 from "../../media/PortfolioThumbnails/1.png";
@@ -16,20 +16,28 @@ import light4 from "../../media/PortfolioThumbnails/8.png";
 
 function Items({ theme }) {
     const { t } = useTranslation();
+    const color = "#FFF"
     return (
         <div id="items">
             <h1>{t("portfolio")}</h1>
-            <div className="buttonGroup">
+            <div className="itemButtonGroup">
                 <button><Link to="/">{t("back")}</Link></button>
             </div>
             <div className="swiper-slide">
                 <Swiper
-                    slideperview={3}
-                    grid={{ rows: 2, }}
-                    spacebetween={30}
-                    pagination={{ clickable: true, }}
-                    modules={[Grid, Pagination]}
-                    className="itemSwiper"
+                    style={{
+                        '--swiper-navigation-color': {color},
+                        '--swiper-pagination-color': '#fff',
+                    }}
+                    slidesPerView={1}
+                    spaceBetween={30}
+                    loop={true}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    navigation={true}
+                    modules={[Pagination, Navigation]}
+                    class="swiper"
                 >
                     <SwiperSlide>
                         <div className="slide">

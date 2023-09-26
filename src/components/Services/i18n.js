@@ -25,7 +25,8 @@ i18n
                     executionParagraph: "The best idea are worthless without execution. I will build your custom Excel sheet.",
                     viewMore: "View More",
                     back: "Back",
-                    copyright: "Copyright Notice"
+                    legalnotice: "Legal Notice",
+                    poweredBy: "@PoweredByLithi"
                 }
             },
             gmc: {
@@ -43,7 +44,8 @@ i18n
                     executionParagraph: "Die beste Idee ist ohne Ausführung wertlos. Ich erstelle Ihre individuelle Excel-Tabelle.",
                     viewMore: "Mehr sehen",
                     back: "Zurück",
-                    copyright: "Copyright-Hinweis"
+                    legalnotice: "Rechtshinweis",
+                    poweredBy: "@AngetriebenVonLithi"
                 }
             }
         },

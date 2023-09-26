@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCards, Pagination, Autoplay } from "swiper/modules";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 import "swiper/css";
 import "swiper/css/effect-cards";
 import 'swiper/css/pagination';
@@ -22,6 +22,9 @@ function Portfolio({ theme }) {
             <h1>{t("portfolio")}</h1>
             <div className="swiper-slide">
                 <Swiper
+                    style={{
+                        '--swiper-pagination-color': '#000',
+                    }}
                     effect={"cards"}
                     pagination={true}
                     autoplay={{
@@ -40,7 +43,7 @@ function Portfolio({ theme }) {
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="slide">
-                            {theme === "dark" ? <img src={dark2}alt="theme" />
+                            {theme === "dark" ? <img src={dark2} alt="theme" />
                                 : <img src={light2} alt="theme" />}
                         </div>
                     </SwiperSlide>
@@ -57,13 +60,13 @@ function Portfolio({ theme }) {
                                 : <img src={light4} alt="theme" />}
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    {/* <SwiperSlide>
                         <div className="slide">
                         <Link to="/portfolio">
                                 See More
                         </Link>
                         </div>
-                    </SwiperSlide>
+                    </SwiperSlide> */}
                 </Swiper>
             </div>
         </div>

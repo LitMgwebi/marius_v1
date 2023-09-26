@@ -2,14 +2,14 @@
     --primaryColor: #FAF1E6;
     --secondaryColour: #FDFAF6;
     --tetiaryColor: #E4EFE7;
-    --logoColor: invert(89%) sepia(9%) saturate(286%) hue-rotate(156deg) brightness(111%) contrast(87%);
+    --logoColor: invert(18%) sepia(22%) saturate(2149%) hue-rotate(99deg) brightness(96%) contrast(95%);
     --textColour: #064420;
 }
 [data-theme='dark'] {
     --primaryColor: #232323;
     --secondaryColour: #4f4e4e;
     --tetiaryColor: #3bce4e;
-    --logoColor: invert(65%) sepia(10%) saturate(3172%) hue-rotate(77deg) brightness(103%) contrast(81%);
+    --logoColor:  invert(100%) sepia(0%) saturate(7500%) hue-rotate(42deg) brightness(98%) contrast(107%);
     --textColour: #ffffff;
 }
 
@@ -101,7 +101,7 @@ header a {
 .headerLogo {
     width: 1.2rem;
     height: 1.2rem;
-    filter: var(--textColour);
+    filter: var(--logoColor);
 }
     .headerLogo:hover {
         width: 1.45rem;
@@ -213,6 +213,9 @@ hr {
     align-items: center;
     padding: 1rem 0
 }
+.serviceLogo {
+    filter: var(--logoColor);
+}
 .idea {
     width: 100%;
     display: flex;
@@ -278,16 +281,58 @@ hr {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-    height: 100%;
+    height: 80%;
 }
-.itemSwiper {
-    background-color: var(--tetiaryColor);
+.itemSwiper{
     height: 60%;
     width: 60%;
+    margin-bottom: 2rem;
+    background-color: yellow;
+}
+.itemSlide {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: auto;
+}
+.itemSlide img { 
+    width:100%;
+    object-fit:contain;
+}
+
+#copyright{
+    background-image: linear-gradient(to bottom right, var(--secondaryColour), var(--primaryColor));
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    min-height: 80%;
+    color: var(--textColour);
+}
+#copyright article {
+    display: flex;
+    flex-direction: row;
+}
+#copyright section {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5%; 
+    margin: 3%
+}
+.vat{
+    display: flex;
+    flex-direction: row;
+}
+.vat h4, p {
+    
+    padding: 0 2%; 
 }
 
 footer{
-    height: 10rem;
+    height: 7rem;
     background-color: var(--primaryColor);
     display: flex;
     justify-content:space-around;
@@ -316,10 +361,12 @@ footer div{
     }
 
     button {
-        padding: 0.8rem;
-        margin: 0.5rem
+        padding: 0.5rem;
+        margin: 0.2rem
     }
-
+    .itemButtonGroup {
+        margin-bottom: 1.5rem;
+    }
     .siteLinks {
         justify-content: space-evenly;
         width: 80%;
@@ -409,8 +456,8 @@ footer div{
     }
 
     .swiper {
-        height: 20rem;
-        width: 60%;
+        height: auto;
+        width: 70%;
     }
 
     .idea {
@@ -430,6 +477,17 @@ footer div{
         width: auto;
         height: 6rem;
     }
+    #socials {
+        height: 14rem;
+    }
+    #socials section {
+        width: 100%;
+    }
+    .socialLink {
+        width: 5rem;
+        height: 5rem;
+        margin: 0.5rem 1rem;
+    }
 
     #items {
         height: auto;
@@ -439,11 +497,23 @@ footer div{
     .itemSwiper {
         height: 20rem;
         width: 75%;
-        margin: 1rem 0;
+        margin: 2rem 0;
     }
 
     footer {
         height: 6rem;
+    }
+
+    #copyright article {
+        flex-direction: column;
+    }
+    #copyright section {
+        width: auto;
+        height: auto;
+        flex-direction: column;
+    }
+    .vat{
+        flex-direction: column;
     }
 }
 

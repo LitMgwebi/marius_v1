@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import monitor from "../../media/monitor.svg";
+import idea from "../../media/idea.svg";
 
 function Service() {
     const { t } = useTranslation();
@@ -10,7 +12,7 @@ function Service() {
                 <section className="development">
                     <div className="ideaImage">
                         <img
-                            src={require("../../media/idea.png")}
+                            src={idea}
                             alt="Idea Development"
                             className="serviceLogo"
                         />
@@ -23,7 +25,7 @@ function Service() {
                 <section className="execution">
                     <div className="ideaImage">
                         <img
-                            src={require("../../media/Computer.png")}
+                            src={monitor}
                             alt="Idea Execution"
                             className="serviceLogo"
                         />
