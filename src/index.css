@@ -12,7 +12,6 @@
     --logoColor:  invert(100%) sepia(0%) saturate(7500%) hue-rotate(42deg) brightness(98%) contrast(107%);
     --textColour: #ffffff;
 }
-
 body {
     margin: 0;
     padding: 0;
@@ -133,7 +132,7 @@ select{
     background-image: linear-gradient(to bottom right, var(--primaryColor), var(--secondaryColour));
     display: flex;
     align-items: center;
-    height: 32rem;
+    height: 100vh;
 }
 .image {
     width: 50%;
@@ -185,26 +184,32 @@ hr {
 
 #portfolio {
     background-image: linear-gradient(to bottom right, var(--primaryColor), var(--secondaryColour));
-    height: auto;
+    height: 100vh;
     display: flex;
     flex-flow: column;
     align-items: center;
 }
 .swiper{
-    height: 40%;
-    width: 40%;
+    width:90%;
+    display: flex;
+    flex-direction: row;
+    height: 90%;
 }
 .slide {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    width: auto;
+    display: flex; 
+    height: 100%;
+    flex-wrap: wrap;
 }
-.slide img { 
-    width:100%;
-    object-fit:contain;
+.slideContent {
+    width: 40%;
+    height: 100%;
 }
-
+.slideImage {
+    width: 60%;
+}
+.slideImage img {
+    width: 75%;
+}
 #service {
     background-image: linear-gradient(to bottom left, var(--secondaryColour), var(--primaryColor));
     height: auto;
@@ -281,13 +286,18 @@ hr {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-    height: 80%;
+    height: 40rem;
+}
+.itemSwiper-slide{
+    height: 50%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .itemSwiper{
     height: 60%;
     width: 60%;
-    margin-bottom: 2rem;
-    background-color: yellow;
 }
 .itemSlide {
     display: flex;

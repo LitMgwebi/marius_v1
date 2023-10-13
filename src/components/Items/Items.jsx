@@ -1,6 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from "swiper/modules";
-import { Link } from "react-router-dom"
+import { EffectCards, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -16,30 +15,29 @@ import light4 from "../../media/PortfolioThumbnails/8.png";
 
 function Items({ theme }) {
     const { t } = useTranslation();
-    const color = "#FFF"
     return (
         <div id="items">
             <h1>{t("portfolio")}</h1>
             <div className="itemButtonGroup">
-                <button><Link to="/">{t("back")}</Link></button>
+                <button>{t("back")}</button>
             </div>
             <div className="swiper-slide">
                 <Swiper
                     style={{
-                        '--swiper-navigation-color': {color},
-                        '--swiper-pagination-color': '#fff',
+                        '--swiper-pagination-color': '#000',
                     }}
-                    slidesPerView={1}
-                    spaceBetween={30}
-                    loop={true}
-                    pagination={{
-                        clickable: true,
+                    effect={"cards"}
+                    pagination={true}
+                    autoplay={{
+                        delay: 1750,
+                        disableOnInteraction: false,
                     }}
-                    navigation={true}
-                    modules={[Pagination, Navigation]}
+                    grabCursor={true}
+                    modules={[EffectCards, Pagination, Autoplay]}
                     class="swiper"
                 >
                     <SwiperSlide>
+                        
                         <div className="slide">
                             {theme === "dark" ? <img src={dark1} alt="theme" />
                                 : <img src={light1} alt="theme" />}

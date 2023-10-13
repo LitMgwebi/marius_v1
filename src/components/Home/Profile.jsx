@@ -1,22 +1,30 @@
-/* eslint-disable react/style-prop-object */
-/* eslint-disable jsx-a11y/alt-text */
 import { useTranslation } from "react-i18next";
+import marius from "../../media/Marius.jpg";
+import { motion as m } from "framer-motion";
 
 function Profile() {
     const { t } = useTranslation();
     return (
-        <div id="profile">
+        <div id="profile"
+        >
             <section className="image">
                 <img
-                    src={require("../../media/Marius.jpg")}
+                    src={marius}
                     title="Marius Edel"
+                    alt="Marius Edel"
                 />
             </section>
-            <section className="writing">
+            <m.section
+                className="writing"
+                initial={{ y: "100%" }}
+                animate={{ y: "0%" }}
+                transition={{ duration: 2, ease: 'easeOut' }}
+                exit={{ opacity: 0 }}
+            >
                 <h1 className="lower">{t("intro")}</h1>
                 <hr />
-                    <h1 className="upper">Marius Edel</h1>
-            </section>
+                <h1 className="upper">Marius Edel</h1>
+            </m.section>
         </div>
     );
 }

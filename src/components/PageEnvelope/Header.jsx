@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom";
-import {NavHashLink} from "react-router-hash-link"
 import moon from "../../media/moon.svg";
 import sun from "../../media/sun.svg";
 import { useTranslation } from "react-i18next";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useRef } from "react";
+import {motion as m} from "framer-motion";
 
 const LANGUAGES = [
     { label: "English", code: "en" },
@@ -24,9 +23,11 @@ function Header({ theme, imgIcon }) {
         navRef.current.classList.toggle("responsive_nav");
     }
     return (
-        <header>
+        <m.header
+        initial="hidden"
+        >
             <div className="siteLinks">
-                <Link to="/"><h4>Marius Edel</h4></Link>
+                <h4>Marius Edel</h4>
 
                 <div className="headerButton">
                     {imgIcon === "dark" ? <img src={sun} onClick={theme} className="headerLogo" alt="theme" />
@@ -46,11 +47,11 @@ function Header({ theme, imgIcon }) {
             </div>
             <div className="topNav">
                 <nav ref={navRef} className="nav">
-                    <NavHashLink to="/#profile" onClick={showNavBar}>{t("profile")}</NavHashLink>
-                    <NavHashLink to="/#aboutMe" onClick={showNavBar}>{t("aboutMe")}</NavHashLink>
-                    <NavHashLink to="/#portfolio" onClick={showNavBar}>{t("portfolio")}</NavHashLink>
-                    <NavHashLink to="/#service" onClick={showNavBar}>{t("services")}</NavHashLink>
-                    <NavHashLink to="/#socials" onClick={showNavBar}>{t("socials")}</NavHashLink>
+                    <a href="/#profile" onClick={showNavBar}>{t("profile")}</a>
+                    <a href="/#portfolio" onClick={showNavBar}>{t("portfolio")}</a>
+                    <a href="/#service" onClick={showNavBar}>{t("services")}</a>
+                    <a href="/#socials" onClick={showNavBar}>{t("socials")}</a>
+                    <a href="/about" onClick={showNavBar}>{t("aboutMe")}</a>
                     <button className="nav-btn nav-close-btn" onClick={showNavBar}>
                         <FaTimes />
                     </button>
@@ -59,7 +60,7 @@ function Header({ theme, imgIcon }) {
                     <FaBars />
                 </button>
             </div>
-        </header>
+        </m.header>
     );
 }
 

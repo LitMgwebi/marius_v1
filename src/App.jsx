@@ -1,14 +1,20 @@
 import Header from "./components/PageEnvelope/Header";
 import Footer from "./components/PageEnvelope/Footer";
-import Home from "./components/Home/Home";
-import Copyright from "./components/Copyright/Copyright";
-import {
-    BrowserRouter,
-    Routes,
-    Route,
-} from "react-router-dom";
-import Items from "./components/Items/Items";
+import Portfolio from "./components/Home/Portfolio";
+import Service from "./components/Home/Service";
+import Socials from "./components/Home/Socials";
+import Profile from "./components/Home/Profile";
+// import Home from "./components/Home/Home";
+// import Copyright from "./components/Copyright/Copyright";
+// import AboutMe from "./components/AboutMe/AboutMe";
+// import {
+//     BrowserRouter,
+//     Routes,
+//     Route,
+// } from "react-router-dom";
+// import Items from "./components/Items/Items";
 import useLocalStorage from "use-local-storage";
+import { AnimatePresence } from "framer-motion";
 // import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 
 function App() {
@@ -20,21 +26,21 @@ function App() {
         setTheme(newTheme);
     }
     return (
-            // <PayPalScriptProvider 
-            //     option={{ "client-id": process.env.REACT_APP_PAYPAL_CLIENT_ID }}
-            // >
-            <div className="App" data-theme={theme}>
-                <BrowserRouter>
-                    <Header theme={switchTheme} imgIcon={theme} />
-                    <Routes>
-                        <Route path="/" element={<Home theme={theme}/>} />
-                        <Route path="/portfolio" element={<Items theme={theme}/>} />
-                        <Route path="/copyright" element={<Copyright/>}/>
-                    </Routes>
-                    <Footer />
-                </BrowserRouter>
-            </div>
-        // </PayPalScriptProvider>
+        <div className="App" data-theme={theme}>
+            <AnimatePresence >
+                <Header
+                    theme={switchTheme}
+                    imgIcon={theme}
+
+                />
+                <Profile />
+                <Portfolio theme={theme} />
+                <Service />
+                <Socials theme={theme} />
+
+                <Footer />
+            </AnimatePresence>
+        </div>
     );
 }
 

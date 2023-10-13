@@ -23,7 +23,7 @@ i18n
                     execution: "Idea Execution",
                     developmentParagraph: "You have an idea but don't know how to realize it? I will help you realize your dream.",
                     executionParagraph: "The best idea are worthless without execution. I will build your custom Excel sheet.",
-                    viewMore: "View More",
+                    viewMore: "View",
                     back: "Back",
                     legalnotice: "Legal Notice",
                     poweredBy: "@PoweredByLithi"
@@ -42,7 +42,7 @@ i18n
                     execution: "Ausführung der Idee",
                     developmentParagraph: "Sie haben eine Idee, wissen aber nicht, wie Sie sie umsetzen können? Ich kann Ihnen helfen.",
                     executionParagraph: "Die beste Idee ist ohne Ausführung wertlos. Ich erstelle Ihre individuelle Excel-Tabelle.",
-                    viewMore: "Mehr sehen",
+                    viewMore: "Mehr",
                     back: "Zurück",
                     legalnotice: "Rechtshinweis",
                     poweredBy: "@AngetriebenVonLithi"

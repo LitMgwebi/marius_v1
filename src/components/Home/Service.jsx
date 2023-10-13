@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import monitor from "../../media/monitor.svg";
 import idea from "../../media/idea.svg";
 
 function Service() {
     const { t } = useTranslation();
+
     return (
         <div id="service">
             <h1>{t("services")}</h1>
@@ -38,7 +38,7 @@ function Service() {
             </div>
 
             <div className="buttonGroup">
-                <button><Link to="/portfolio">{ t("viewMore")}</Link></button>
+                <button>{ t("viewMore")}</button>
             </div>
         </div>
     )

@@ -1,5 +1,5 @@
 
-import { Link } from "react-router-dom";
+
 import { useTranslation } from "react-i18next";
 
 function CopyRight() {
@@ -9,7 +9,7 @@ function CopyRight() {
             <h1>{t("legalnotice")}</h1>
             <div className="buttonGroup">
                 <button>
-                    <Link to="/">{t("back")}</Link>
+                    <button to="/">{t("back")}</button>
                 </button>
             </div>
             <article>
